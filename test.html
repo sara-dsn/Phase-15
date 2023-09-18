@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phase 15 test</title>
+    <script>
+        function checkform(f){
+            alert("Vous vous applez: "+f.elements['nom'].value+" "+f.elements['prenom'].value);
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <h2>Intercepte la validation du formulaire</h2>
+    <form id="form1" name="form1" onsubmit="return checkForm(this);">
+        <input type="text" name="nom" value="Dupont"/>
+        <input type="text" name="prenom" value="Eric"/>
+        <input type="submit" id="idSubForm1" name="SubForm1" value="Connection"/>
+
+    </form>
+    
+</body>
+</html>
