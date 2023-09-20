@@ -4,22 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulaire</title>
-    <script src="asset/ex1.js"></script>
+    
+    <link rel="stylesheet" href="asset/style.css">
 </head>
 <body>
     <h1> Vos coordonnées :</h1>
-    <form>
-        <h2> *Ces zones sont obligatoires pour envoyer le formulaire.</h2>
-        <label for="societe">Société :</label><input type="text" name="societe" id="societe">*<br>
-        <label for="contact">Personne à contacter :</label><input type="text" name="contact" id="contact">*<br>
-        <label for="adresse">Adresse de l'entreprise :</label>
-        <label for="cp">Code Postal :</label><input type="text" name="cp" id="cp">*<br>
-        <label for="ville">Ville :</label><input type="text" name="ville" id="ville">*<br>
-        <label for="email">Email*:</label><input type="email" name="email" id="email"/>*<br>
-        <label for="tel">Téléphone :</label><input type="tel" id="tel"><br>
-        <label for="projet">Sélecionnez l'environnement technique du projet :</label>
+    <form action="destination.php" method="post" id="form">
+        <h2 class="rouge"> *Ces zones sont obligatoires pour envoyer le formulaire.</h2>
+        <label for="societe">Société :</label><input type="text" name="societe" id="societe"><sub class="rouge">*</sub>
+        <span id="s_manquant"></span><br>
+        <label for="contact">Personne à contacter :</label><input type="text" name="contact" id="contact"><sub class="rouge">*</sub>
+        <span id="c_manquant"></span><br>
+        <label for="adresse">Adresse de l'entreprise :</label><sub><textarea name="commentaire" rows="3" cols="20"></textarea></sub><br>
+        <label for="cp">Code Postal :</label><input type="text" name="cp" id="cp"><sub class="rouge">*</sub>
+        <span id="cp_manquant"></span><br>
+        <label for="ville">Ville :</label><input type="text" name="ville" id="ville"><sub class="rouge">*</sub>
+        <span id="v_manquant"></span><br><br>
+        <label for="email">E-mail :</label><input type="email" name="email" id="email"/><sub class="rouge">*</sub>
+        <span id="e_manquant"></span><br><br>
+        <label for="telephone">Téléphone :</label><input type="tel" id="telephone"><br>
+        <label for="projet">Sélecionnez l'environnement technique du projet :</label><sub><textarea name="commentaire" rows="3" cols="20"></textarea></sub><br>
         <select id="choix" size="1">
-            <option value="choix">Choisissez</option>
+            <option value="choix" >Choisissez</option>
             <option value="1">Access</option>
             <option value="2">Java</option>
             <option value="3">Delphi</option>
@@ -34,9 +40,12 @@
             <option value="12">Oracle</option>
             <option value="13">Autres...</option>
         </select><br>
+        <input type="submit" value="Envoyer" id="envoi">
+        <input type="reset" value="Effacer">
       
        
-
+        
     </form>
+    <script src="asset/ex1.js"></script>
 </body>
 </html>
