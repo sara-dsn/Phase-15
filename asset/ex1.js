@@ -41,4 +41,9 @@ function f_valid() {
         v_manquant.textContent = "Entrez le nom de la Ville s'il vous plaît.";
         v_manquant.style.color = "red";
     }
+    let select=document.getElementById("choix");
+    let affiche=document.getElementById("champ");
+    select.addEventListener("change",function(){
+        affiche.value=select.value;
+    })
     };
