@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phase finale</title>
+    <script src="asset/ex5.js"></script>
+    <link rel="stylesheet" href="asset/css/style.css">
+    <link rel="stylesheet" media="screen and (max-width:767px)" href="mobile.css">
+    <link rel="stylesheet" media="screen and (min-width:768px)" href="tablette.css">
+    <link rel="stylesheet" media="screen and (min-width:768px)" href="desktop.css">
+</head>
+
+<body>
+    <header>
+        <img class="jardin" src="assets/img/jarditou_logo.jpg" alt="jarditou_logo">
+        <p class="titre">Tout le jardin</p>
+    </header>
+    <nav class="navig">
+        <a class="block" href="index.html" title="Acceuil">Acceuil</a>
+        <a class="block" href="tableau.html" title="Tableau">Tableau</a>
+        <a class="block" href="formulaire.html" title="Contact">Contact</a>
+    </nav>
+    <img src="assets/img/promotion.jpg" alt="promotion.jarditou"><br>
+    <section>
+        <div class="box" id="un">[COLONNE DROITE]</div>
+        <p>*Ces zones sont obligatoires</p>
+        <form action="http://bienvu.net/script.php" method="get">
+            <fieldset>
+                <legend>Vos coordonnées</legend>
+                <label for="nom">Votre nom*:</label><input type="text" name="nom" id="nom" ><span id="n_manquant"></span><br>
+                <label for="prenom">Votre prénom*:</label><input type="text" name="prenom" id="prenom" ><span id="p_manquant"></span><br>
+                <label for="sexe">Sexe*:</label><input type="radio" name="femme" id="femme" value="femme" >Féminin
+                <input type="radio" name="masculin" value="masculin" id="masculin" >Masculin<br>
+                <label for="date">Date de naissance*:</label><input type="date" id="date" ><span id="d_manquant"></span><br>
+                <label for="cp">Code postal*:</label><input type="text" name="cp" id="cp" ><span id="cp_manquant"></span><br>
+                <label for="adresse">Adresse:</label><input type="text" name="adresse" id="adresse" ><span id="a_manquant"></span><br>
+                <label for="ville">Ville:</label><input type="text" name="ville" id="ville" ><span id="v_manquant"></span><br>
+                <label for="email">Email*:</label><input type="email" name="email" id="email" size="30" maxlength="30"
+                    value="sara@afpa.fr" ><span id="e_manquant"></span><br>
+            </fieldset>
+            <fieldset>
+                <legend>Votre demande</legend>
+                <label for="sujet">Sujet*:</label>
+                <select id="sujet" size="1" ><span id="s_manquant"></span>
+                    <option value="sujet">Veuillez séléctionner un sujet</option>
+                    <option value="inscription">Mes commandes</option>
+                    <option value="renseignement">Question sur un produit</option>
+                    <option value="rendez-vous">Réclamation</option>
+                    <option value="autre">Autre</option>
+                </select><br>
+                <label for="informations">Votre question*:</label><textarea name="informations" id="informations"
+                    rows="2" cols="22"></textarea>
+            </fieldset>
+            <input type="radio" name="consentement" value="consentement" id="consentement">*J'accepte le traitement informatique de ce formulaire<span id="c_manquant"></span><br>
+            <input type="submit" value="Envoyer" id="envoi">
+            <input type="reset" value="annuler">
+        </form>
+    </section>
+    <footer class="navig">
+        <a class="block" href="index.html" title="Acceuil">Acceuil</a>
+        <a class="block" href="tableau.html" title="Tableau">Tableau</a>
+        <a class="block" href="formulaire.html" title="Contact">Contact</a>
+    </footer>
+
+</body>
+
+</html>
